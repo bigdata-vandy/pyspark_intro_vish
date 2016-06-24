@@ -42,5 +42,5 @@ pip install happybase
 
 - Ensure you have these in the bashrc:
 
-export HADOOP_HOME=/usr/lib/hadoop-mapreduce/
-export PYSPARK_PYTHON=/opt/anaconda2/python27/bin/python
+-- export HADOOP_HOME=/usr/lib/hadoop-mapreduce/
+-- export PYSPARK_PYTHON=/opt/anaconda2/python27/bin/python
