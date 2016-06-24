@@ -13,3 +13,14 @@ We also go through splitting up the line and forming a tuple for each row in the
 Thats it folks !
 
 Happy Sparking it up ;)
+
+Useful Tutorial Links:
+
+1.) This one outlines the configuration for pyspark before we start launching jobs. https://spark.apache.org/docs/0.9.1/python-programming-guide.html 
+
+2.) This has good explanations for the most basic functions in pyspark which are brief and to the point.
+http://www.mccarroll.net/blog/pyspark2/
+
+3.) This is the list of all the functions/utilities provided in spark for RDD's.
+https://spark.apache.org/docs/1.1.1/api/python/pyspark.rdd.RDD-class.html
+
