@@ -14,6 +14,9 @@ Thats it folks !
 
 Happy Sparking it up ;)
 
+Movie Data set used is open source from the following link:
+http://files.grouplens.org/datasets/movielens/
+
 Useful Tutorial Links:
 
 1.) This one outlines the configuration for pyspark before we start launching jobs. https://spark.apache.org/docs/0.9.1/python-programming-guide.html 
