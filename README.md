@@ -24,3 +24,16 @@ http://www.mccarroll.net/blog/pyspark2/
 3.) This is the list of all the functions/utilities provided in spark for RDD's.
 https://spark.apache.org/docs/1.1.1/api/python/pyspark.rdd.RDD-class.html
 
+How to get started:
+
+1.) Python 2.7. Happy base. Pyspark. Follow the below commands:
+
+- First one creates a virtual environment
+conda create -n venv python=2.7
+- Activates the new environment
+source activate venv
+- Installs Happy base
+pip install happybase
+- Ensure you have these in the bashrc
+export HADOOP_HOME=/usr/lib/hadoop-mapreduce/
+export PYSPARK_PYTHON=/opt/anaconda2/python27/bin/python
