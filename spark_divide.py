@@ -11,18 +11,21 @@ MAX_WORDS = 5000
 
 index_file = 'hdfs:///user/%s/movie_divide/' % VUID
 
-def index(spark, wiki_file):
-    wiki_data = spark.textFile(wiki_file)
-    header = wiki_data.first() #extract header
-    wiki_data = wiki_data.filter(lambda x:x != header)
-    wiki_data = wiki_data.map(lambda line: line.split(",")) \
+def index(spark, movie_file):
+    movie_data = spark.textFile(movie_file)
+
+    header = movie_data.first() #extract header
+
+    movie_data = movie_data.filter(lambda x:x != header)
+
+    movie_data = movie_data.map(lambda line: line.split(",")) \
         .map(lambda movie: (movie[0])) \
 	.map(lambda x: x.strip(' "'))
 
-    total_count = wiki_data.distinct() \
+    total_count = movie_data.distinct() \
         .count() \
 
-    final = wiki_data.map(lambda x: ( float(x) / float (total_count)))
+    final = movie_data.map(lambda x: ( float(x) / float (total_count)))
 
     final.saveAsTextFile(index_file)
     return total_count

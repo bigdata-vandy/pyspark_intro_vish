@@ -11,12 +11,12 @@ MAX_WORDS = 5000
 
 index_file = 'hdfs:///user/%s/movie_tutorial/' % VUID
 
-def index(spark, wiki_file):
-    wiki_data = spark.textFile(wiki_file)
-    wiki_data = wiki_data.map(lambda line: line.split(",")) \
+def index(spark, movie_file):
+    movie_data = spark.textFile(movie_file)
+    movie_data = movie_data.map(lambda line: line.split(",")) \
 #	.map(lambda movie: (movie[0])) \
 	
-    wiki_data.saveAsTextFile(index_file)
+    movie_data.saveAsTextFile(index_file)
 
 if __name__ == '__main__':
     conf = SparkConf()
